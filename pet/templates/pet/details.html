@@ -1,0 +1,14 @@
+{% extends "pet/base.html" %} {% block content %}
+
+<center>
+    <h1>{{ pet }} </h1>
+    {{pet.age}} years old<br/>
+    {{pet.description}}<br/>
+    {{pet.breed}}<br/>
+    <img src="{{pet.image.url}}" width = 100%>
+    
+</center>
+
+{% endblock %}
+
+

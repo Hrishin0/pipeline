@@ -1,0 +1,61 @@
+{% extends "pet/base.html" %} {% block content %}
+<h1> Pets </h1>
+<style>
+    img {
+        float: left;
+        width:  250px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      
+    }
+    
+    .card-text {
+      flex: 1 0 auto;
+      min-height:50px;
+    }
+    
+    .card{
+        margin-bottom:20px;
+    }
+    body {
+            background: linear-gradient(to right, #FFEEEE, #DDEFBB);
+         }
+    .card-body{
+        opacity: 0.7; 
+    }
+    .card-text{
+        opacity: 1 !important;
+        color: black;
+        
+    }
+
+
+</style>
+<body>
+<div class="container">
+<div class="row">
+        {% for x in boi %}
+            <div class="col-4">
+                <div class="card" style="">
+                <a href="{% url 'details' x.id %}" ><img src="{{ x.image.url }}" class="card-img-top"> </a>
+                  <div class="card-body">
+                    <h5 class="card-title">{{ x.name }}</h5>
+                    <p class="card-text" >{{x.description}}</p>
+                    <a href="{% url 'update' x.id %}" class="btn btn-outline-info">Update</a>
+                    <a href="{% url 'delete' x.id %}" class="btn btn-outline-danger">Delete</a>
+                  </div>
+                </div>
+            </div>
+        {% endfor %}
+
+
+
+{% endblock %}
+
+
+</body>
