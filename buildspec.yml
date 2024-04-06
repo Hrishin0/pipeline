@@ -21,7 +21,7 @@ phases:
       - unzip ./sonar-scanner-cli-3.3.0.1492-linux.zip
   build:
     commands:
-      - mvn sonar:sonar -Dsonar.login=7cf2078ee5cbdcefea96c71d3379dac3f935024e -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=Devops-Project -Dsonar.organization=Hrishin0 || true
+      - mvn sonar:sonar -Dsonar.login=$LOGIN -Dsonar.host.url=https://sonarcloud.io -Dsonar.projectKey=Devops-Project -Dsonar.organization=Hrishin0 || true
       - sleep 5
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=Devops-Project >result.json
       - cat result.json
