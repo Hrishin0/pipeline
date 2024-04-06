@@ -1,4 +1,5 @@
 """Creating Pet Form"""
+# pylint: disable=R0903
 from django import forms
 from django.forms import ModelForm
 from .models import Pet

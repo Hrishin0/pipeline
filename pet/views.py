@@ -1,4 +1,5 @@
 """Creating the Pet related views"""
+# pylint: disable=E1101,C0116,W0613
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .models import Pet
