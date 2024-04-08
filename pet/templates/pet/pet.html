@@ -17,6 +17,8 @@
     .card-text {
       flex: 1 0 auto;
       min-height:50px;
+      opacity: 1 !important;
+      color: black;
     }
     
     .card{
@@ -28,11 +30,6 @@
     .card-body{
         opacity: 0.7; 
     }
-    .card-text{
-        opacity: 1 !important;
-        color: black;
-        
-    }
 
 
 </style>
@@ -41,7 +38,7 @@
 <div class="row">
         {% for x in boi %}
             <div class="col-4">
-                <div class="card" style="">
+                <div class="card">
                 <a href="{% url 'details' x.id %}" ><img src="{{ x.image.url }}" class="card-img-top"> </a>
                   <div class="card-body">
                     <h5 class="card-title">{{ x.name }}</h5>
