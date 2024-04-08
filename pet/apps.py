@@ -3,5 +3,5 @@ from django.apps import AppConfig
 
 
 class PetConfig(AppConfig):
-    """To Create PetConfig"""
+    """To Create a PetConfig"""
     name = 'pet'
